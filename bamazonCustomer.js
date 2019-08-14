@@ -25,7 +25,7 @@ function pickToBid(idArr) {
         .prompt([
             {
                 type: 'input',
-                message: 'What is the ID of the item you would like to bid on?',
+                message: 'What is the ID of the item you would like to purchase?',
                 name: 'selectedItem'
             }
         ])
@@ -48,6 +48,26 @@ function getItemDetails(id) {
     });
 }
 
+function afterPurchase() {
+    inquirer
+    .prompt([
+        {
+            type: 'list',
+            message: 'Would you like to purchase another item?',
+            choices: ['yes', 'no'],
+            name: 'anotherPurchase'
+        }
+    ])
+    .then(function (response) {
+        if (response.anotherPurchase === 'yes') {
+            getProducts();
+        } else {
+            console.log('Thanks for your business.');
+            process.exit();
+        }
+    });
+}
+
 function updateDatabase(updateId, newAmt, updatePrice, bought) {
     let updateItemId = updateId;
     let itemPrice = parseFloat(updatePrice);
@@ -61,7 +81,7 @@ function updateDatabase(updateId, newAmt, updatePrice, bought) {
     connection.query('UPDATE products SET ? WHERE ?', [updateStock, updateItemId], function (err, response) {
         if (err) throw err;
         console.log(`Your transaction was successful. The total was: ${total.toFixed(2)}.`);
-        connection.end();
+        afterPurchase();
     });
 }
 
@@ -122,7 +142,13 @@ function getProducts() {
     });
 }
 
+getProducts();
+
+/*
 connection.connect(function(err) {
   if (err) throw err;
   getProducts();
 });
+*/
+
+//QUESTION : where to end connection?
