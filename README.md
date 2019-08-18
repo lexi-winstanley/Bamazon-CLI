@@ -12,16 +12,18 @@ This application is organized into 3 JavaScript files, one for each role (custom
 From the terminal type one of the following: 
 
 **node bamazonCustomer.js**
+
 You will be presented with the following prompts: 
 ![Customer Prompts](https://raw.githubusercontent.com/lexi-winstanley/Bamazon-CLI/master/screenshots/customerPrompt.PNG)
 
-Once you select an item ID and quantity to purchase, the application checks for the desired quantity and then the transaction completes: 
+Once you select an item ID and quantity to purchase, the application checks for the desired quantity and then the transaction completes, the price of the item is multipled by the quantity and added to the product sales column and displayed as the total to the user: 
 ![Customer Transaction](https://raw.githubusercontent.com/lexi-winstanley/Bamazon-CLI/master/screenshots/customerTransaction.PNG)
 
 You can then choose to purchase another item or not. If you select no, the following screen will display: 
 ![Customer Exit](https://raw.githubusercontent.com/lexi-winstanley/Bamazon-CLI/master/screenshots/customerEnd.PNG)
 
 **node bamazonManager.js**
+
 You will be presented with the following prompts: 
 ![Manager Prompts](https://raw.githubusercontent.com/lexi-winstanley/Bamazon-CLI/master/screenshots/managerPrompt.PNG)
 
@@ -41,6 +43,7 @@ You can then choose to take another action or not. If you select no, the followi
 ![Manager Exit](https://raw.githubusercontent.com/lexi-winstanley/Bamazon-CLI/master/screenshots/managerEnd.PNG)
 
 **node bamazonSupervisor.js**
+
 You will be presented with the following prompts: 
 ![Supervisor Prompts](https://raw.githubusercontent.com/lexi-winstanley/Bamazon-CLI/master/screenshots/supervisorPrompt.PNG)
 
