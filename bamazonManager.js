@@ -2,12 +2,12 @@ const mysql = require('mysql');
 const inquirer = require('inquirer');
 const Table = require('cli-table');
 
-const table = new Table({
+let table = new Table({
     head: ['Item ID', 'Product Name', 'Department Name', 'Price', 'Stock Quantity']
   , colWidths: [10, 30, 30, 10, 20]
 });
 
-const tableLow = new Table({
+let tableLow = new Table({
     head: ['Item ID', 'Product Name', 'Department Name', 'Price', 'Stock Quantity']
   , colWidths: [10, 30, 30, 10, 20]
 });
@@ -52,6 +52,10 @@ function anotherAction() {
 }
 
 function viewAll() {
+    table = new Table({
+        head: ['Item ID', 'Product Name', 'Department Name', 'Price', 'Stock Quantity']
+      , colWidths: [10, 30, 30, 10, 20]
+    });
     managerProductIds = [];
     getAllProductIds();
     connection.query('SELECT * FROM products', function (err, response) {
@@ -66,6 +70,10 @@ function viewAll() {
 }
 
 function viewLow() {
+    tableLow = new Table({
+        head: ['Item ID', 'Product Name', 'Department Name', 'Price', 'Stock Quantity']
+      , colWidths: [10, 30, 30, 10, 20]
+    });
     connection.query('SELECT * FROM products WHERE stock_quantity <=5', function (err, response) {
         if (err) throw err;
         for (let i = 0; i < response.length; i++) {
@@ -91,7 +99,6 @@ function selectAddMore() {
                 console.log('That is not a valid item ID.');
                 selectAddMore();
             } else {
-                console.log('valid');
                 itemDetails(response.addMoreId);
             }
         });
@@ -157,8 +164,8 @@ function addNew() {
             product_name: response.newProdName,
             department_name: response.newDeptName,
             price: response.newPrice,
-            stock_quantity: response.newQuantity
-        };
+            stock_quantity: response.newQuantity 
+       };
         connection.query('INSERT INTO products SET ?', newItem, function (err, response) {
             if (err) throw err;
             console.log(`The item has been successfully added.`);
@@ -166,7 +173,6 @@ function addNew() {
         });
     });
 }
-
 
 
 function menuOptions() {
