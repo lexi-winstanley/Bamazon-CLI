@@ -40,6 +40,7 @@ function getCurrentDepts() {
                 currDepts.push(response[i].department_name);
             }
         }
+        compareDepartments();
     });
 }
 
@@ -51,7 +52,6 @@ function getStoredDepts() {
                 storedDepts.push(response[i].department_name.toLowerCase());
             }
         }
-        compareDepartments();
     });
 }
 
@@ -221,5 +221,5 @@ function anotherAction() {
         });
 }
 
-getCurrentDepts();
 getStoredDepts();
+getCurrentDepts();
