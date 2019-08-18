@@ -1,0 +1,25 @@
+{
+  "name": "bamazon-cli",
+  "version": "1.0.0",
+  "description": "A CLI that allows users to interact with the Bamazon MySQL database.",
+  "main": "bamazonCustomer.js",
+  "dependencies": {
+    "cli-table": "^0.3.1",
+    "inquirer": "^6.5.1",
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lexi-winstanley/Bamazon-CLI.git"
+  },
+  "author": "Lexi Winstanley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lexi-winstanley/Bamazon-CLI/issues"
+  },
+  "homepage": "https://github.com/lexi-winstanley/Bamazon-CLI#readme"
+}
