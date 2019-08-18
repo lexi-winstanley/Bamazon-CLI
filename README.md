@@ -44,10 +44,10 @@ You can then choose to take another action or not. If you select no, the followi
 
 **node bamazonSupervisor.js**
 
-You will be presented with the following prompts: 
+You will be presented with the options to 'View Product Sales by Department' or 'Add New Department' however if there are departments in the products table that are not included in the departments table, you will be prompted to add the missing departments:
 ![Supervisor Prompts](https://raw.githubusercontent.com/lexi-winstanley/Bamazon-CLI/master/screenshots/supervisorPrompt.PNG)
 
-If there are departments in the products table that are not included in the departments table, you will be prompted to add the missing departments: 
+If you elect to add the missing departments the following will be prompted/displayed: 
 ![Supervisor Add Missing Departments](https://raw.githubusercontent.com/lexi-winstanley/Bamazon-CLI/master/screenshots/supervisorAddMissing.PNG)
 
 If you select 'View Product Sales by Department' the following will be prompted/displayed: 
