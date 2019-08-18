@@ -9,6 +9,52 @@ This application is organized into 3 JavaScript files, one for each role (custom
 ## Instructions
 **Notes:** this application requires Node.js and several Node packages. These dependencies can be found in the package.json file and are necessary for Bamazon-CLI to work as described.
 
+From the terminal type one of the following: 
+
+**node bamazonCustomer.js**
+You will be presented with the following prompts: 
+![Customer Prompts](https://raw.githubusercontent.com/lexi-winstanley/Bamazon-CLI/master/screenshots/customerPrompt.PNG)
+
+Once you select an item ID and quantity to purchase, the application checks for the desired quantity and then the transaction completes: 
+![Customer Transaction](https://raw.githubusercontent.com/lexi-winstanley/Bamazon-CLI/master/screenshots/customerTransaction.PNG)
+
+You can then choose to purchase another item or not. If you select no, the following screen will display: 
+![Customer Exit](https://raw.githubusercontent.com/lexi-winstanley/Bamazon-CLI/master/screenshots/customerEnd.PNG)
+
+**node bamazonManager.js**
+You will be presented with the following prompts: 
+![Manager Prompts](https://raw.githubusercontent.com/lexi-winstanley/Bamazon-CLI/master/screenshots/managerPrompt.PNG)
+
+If you select 'View Products for Sale' the following will be prompted/displayed: 
+![Manager View All Products](https://raw.githubusercontent.com/lexi-winstanley/Bamazon-CLI/master/screenshots/managerViewProducts.PNG)
+
+If you select 'View Low Inventory' the following will be prompted/displayed: 
+![Manager View Low Inventory Products](https://raw.githubusercontent.com/lexi-winstanley/Bamazon-CLI/master/screenshots/managerViewLow.PNG)
+
+If you select 'Add to Inventory' the following will be prompted/displayed: 
+![Manager Add Inventory](https://raw.githubusercontent.com/lexi-winstanley/Bamazon-CLI/master/screenshots/managerAddInventory.PNG)
+
+If you select 'Add New Product' the following will be prompted/displayed: 
+![Manager Add New Product](https://raw.githubusercontent.com/lexi-winstanley/Bamazon-CLI/master/screenshots/managerAddProduct.PNG)
+
+You can then choose to take another action or not. If you select no, the following screen will display: 
+![Manager Exit](https://raw.githubusercontent.com/lexi-winstanley/Bamazon-CLI/master/screenshots/managerEnd.PNG)
+
+**node bamazonSupervisor.js**
+You will be presented with the following prompts: 
+![Supervisor Prompts](https://raw.githubusercontent.com/lexi-winstanley/Bamazon-CLI/master/screenshots/supervisorPrompt.PNG)
+
+If there are departments in the products table that are not included in the departments table, you will be prompted to add the missing departments: 
+![Supervisor Add Missing Departments](https://raw.githubusercontent.com/lexi-winstanley/Bamazon-CLI/master/screenshots/supervisorAddMissing.PNG)
+
+If you select 'View Product Sales by Department' the following will be prompted/displayed: 
+![Supervisor View Product Sales by Department](https://raw.githubusercontent.com/lexi-winstanley/Bamazon-CLI/master/screenshots/supervisorView.PNG)
+
+If you select 'Add New Department' the following will be prompted/displayed: 
+![Supervisor Add New Department](https://raw.githubusercontent.com/lexi-winstanley/Bamazon-CLI/master/screenshots/supervisorAddNew.PNG)
+
+You can then choose to purchase another item or not. If you select no, the following screen will display: 
+![Supervisor Exit](https://raw.githubusercontent.com/lexi-winstanley/Bamazon-CLI/master/screenshots/supervisorEnd.PNG) 
 
 ## Technologies Used
 **JavaScript**
